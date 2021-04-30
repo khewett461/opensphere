@@ -856,7 +856,7 @@ os.geo.jsts.buffer = function(geometry, distance, opt_skipTransform) {
     buffer = os.geo.jsts.validate(buffer);
 
     // don't interpolate or normalize further
-    buffer.set(os.geom.GeometryField.NORMALIZED, true);
+    os.geo2.normalizeGeometryCoordinates(buffer);
     buffer.set(os.interpolate.METHOD_FIELD, os.interpolate.Method.NONE);
   }
 
